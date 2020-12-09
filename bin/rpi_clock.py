@@ -32,10 +32,10 @@ FONT_NAME = "helvetica"
 FONT_SIZE = 40
 FONT_POPUP_SIZE = 24
 FONT_STYLE = "normal"
-SPACER_SIZE = 20
+SPACER_SIZE = 200
 BUTTON_WIDTH = 6
 BUTTON_HEIGHT = 2
-FG_COLOR_NORMAL = "green"
+FG_COLOR_NORMAL = "white"
 FG_COLOR_ABNORMAL = "red"
 BG_COLOR_ROOT = "black"
 BG_COLOR_POPUP = BG_COLOR_ROOT
@@ -352,13 +352,15 @@ display_spacer1 = Label(tk_root, font=(FONT_NAME, SPACER_SIZE, FONT_STYLE), \
                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_spacer1.pack()
 display_spacer1.config(text=" ")
-display_date = Label(tk_root, font=(FONT_NAME, FONT_SIZE, FONT_STYLE), \
-                     fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
-display_date.pack()
+
 
 display_time = Label(tk_root, font=(FONT_NAME, FONT_SIZE, FONT_STYLE), \
                      fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_time.pack()
+
+display_date = Label(tk_root, font=(FONT_NAME, FONT_SIZE, FONT_STYLE), \
+                     fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
+display_date.pack()
 
 display_cur_temp = Label(tk_root, font=(FONT_NAME, FONT_SIZE, FONT_STYLE), \
                          fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
