@@ -90,9 +90,9 @@ def get_config_boolean(arg_config, arg_key):
 def validate_temp_units(str_temp_units):
     wstr = str_temp_units.lower()
     if wstr == "metric":
-        return True, "C"
+        return True, "°C"
     if wstr == "imperial":
-        return True, "F"
+        return True, "°F"
     if wstr == "kelvin":
         return True, "K"
     return False, "rubbish"
