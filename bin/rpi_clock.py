@@ -32,7 +32,7 @@ FONT_NAME = "helvetica"
 FONT_SIZE = 20
 FONT_POPUP_SIZE = 24
 FONT_STYLE = "normal"
-SPACER_SIZE = 53
+SPACER_SIZE = 60
 BUTTON_WIDTH = 6
 BUTTON_HEIGHT = 2
 FG_COLOR_NORMAL = "white"
@@ -354,7 +354,7 @@ display_spacer1.pack()
 display_spacer1.config(text=" ")
 
 
-display_time = Label(tk_root, font=(FONT_NAME, 53, FONT_STYLE), \
+display_time = Label(tk_root, font=(FONT_NAME, 70, FONT_STYLE), \
                      fg="green", bg=BG_COLOR_ROOT)
 display_time.pack()
 
