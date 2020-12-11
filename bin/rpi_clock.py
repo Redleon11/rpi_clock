@@ -32,7 +32,7 @@ FONT_NAME = "Commodore 64"
 FONT_SIZE = 20
 FONT_POPUP_SIZE = 24
 FONT_STYLE = "normal"
-SPACER_SIZE = 60
+SPACER_SIZE = 70
 BUTTON_WIDTH = 6
 BUTTON_HEIGHT = 2
 FG_COLOR_NORMAL = "white"
@@ -90,9 +90,9 @@ def get_config_boolean(arg_config, arg_key):
 def validate_temp_units(str_temp_units):
     wstr = str_temp_units.lower()
     if wstr == "metric":
-        return True, "°C"
+        return True, "C"
     if wstr == "imperial":
-        return True, "°F"
+        return True, "F"
     if wstr == "kelvin":
         return True, "K"
     return False, "rubbish"
@@ -359,17 +359,13 @@ display_spacer1.pack()
 display_spacer1.config(text=" ")
 
 
-display_time = Label(tk_root, font=(FONT_NAME, 90, FONT_STYLE), \
+display_time = Label(tk_root, font=(FONT_NAME, 80, FONT_STYLE), \
                      fg="green", bg=BG_COLOR_ROOT)
 display_time.pack()
 
 display_date = Label(tk_root, font=(FONT_NAME, 25, FONT_STYLE), \
                      fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_date.pack()
-
-display_cur_temp = Label(tk_root, font=(FONT_NAME, 15, FONT_STYLE), \
-                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
-display_cur_temp.pack()
 
 display_cur_cond = Label(tk_root, font=(FONT_NAME, 15, FONT_STYLE), \
                          fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
@@ -378,6 +374,10 @@ display_cur_cond.pack()
 display_cur_city = Label(tk_root, font=(FONT_NAME, 15, FONT_STYLE), \
                          fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_cur_city.pack()
+
+display_cur_temp = Label(tk_root, font=(FONT_NAME, 15, FONT_STYLE), \
+                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
+display_cur_temp.pack()
 
 display_spacer2 = Label(tk_root, font=(FONT_NAME, SPACER_SIZE, FONT_STYLE), \
                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
