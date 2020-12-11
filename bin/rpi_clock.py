@@ -310,7 +310,7 @@ def get_display_data():
                            str_date, str_time, str_temp, str_condition)
     temp=round(str_temp)
     str_temp=temp
-    str_condition=str_condition+", "+ str_temp
+    str_condition=str_condition+", "+ "%d" %(str_temp)
     # Return strings for Tk display
     return(str_date, str_time, str_temp, str_condition)
 
