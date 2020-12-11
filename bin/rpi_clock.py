@@ -308,7 +308,7 @@ def get_display_data():
     if parms.FLAG_TRACING:
         parms.logger.debug("Display date = %s, time = %s, temp = %s, cond = %s",
                            str_date, str_time, str_temp, str_condition)
-    temp=int(str_temp)
+    temp=round(str_temp)
     str_temp=temp
     # Return strings for Tk display
     return(str_date, str_time, str_temp, str_condition)
