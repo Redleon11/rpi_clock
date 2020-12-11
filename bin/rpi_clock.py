@@ -28,7 +28,7 @@ URL_MIDDLE_2 = "&units="
 # Video display parameters
 WINDOW_SIZE_ROOT = "320x200"
 WINDOW_SIZE_POPUP = "320x200"
-FONT_NAME = "helvetica"
+FONT_NAME = "Commodore-64-v6"
 FONT_SIZE = 20
 FONT_POPUP_SIZE = 24
 FONT_STYLE = "normal"
@@ -354,7 +354,7 @@ display_spacer1.pack()
 display_spacer1.config(text=" ")
 
 
-display_time = Label(tk_root, font=(FONT_NAME, 70, FONT_STYLE), \
+display_time = Label(tk_root, font=(FONT_NAME, 90, FONT_STYLE), \
                      fg="green", bg=BG_COLOR_ROOT)
 display_time.pack()
 
