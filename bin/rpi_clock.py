@@ -310,7 +310,7 @@ def get_display_data():
                            str_date, str_time, str_temp, str_condition)
     temp=round(str_temp)
     str_temp=temp
-    str_condition=str_condition+", "+ "%d %s" % (str_temp, parms.TEMP_SUFFIX)
+    
     # Return strings for Tk display
     return(str_date, str_time, str_temp, str_condition)
 
@@ -333,13 +333,13 @@ def display_main_procedure():
         display_cur_cond.config(fg=FG_COLOR_NORMAL)
         display_cur_city.config(fg=FG_COLOR_NORMAL)
         
-        display_cur_cond.config(text="%s" % str_condition)
+        display_cur_cond.config(text="%s, %d %s" % (str_condition,str_temp,parms.TEMP_SUFFIX))
     else:
         
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
         display_cur_city.config(fg=FG_COLOR_ABNORMAL)
         
-        display_cur_cond.config(text="%s" % str_condition)
+        display_cur_cond.config(text="%s, %d %s" % (str_condition,str_temp,parms.TEMP_SUFFIX))
     if parms.FLAG_TRACING:
         parms.logger.debug("display_main_procedure going back to sleep")
     tk_root.after(parms.SLEEP_TIME_MSEC, display_main_procedure)
