@@ -359,7 +359,7 @@ display_spacer1.pack()
 display_spacer1.config(text=" ")
 
 
-display_time = Label(tk_root, font=(FONT_NAME, 80, FONT_STYLE), \
+display_time = Label(tk_root, font=(FONT_NAME, 75, FONT_STYLE), \
                      fg="green", bg=BG_COLOR_ROOT)
 display_time.pack()
 
