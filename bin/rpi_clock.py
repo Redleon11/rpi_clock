@@ -325,15 +325,18 @@ def display_main_procedure():
     (str_date, str_time, str_temp, str_condition) = get_display_data()
     display_date.config(text=str_date)
     display_time.config(text=str_time)
+    display_cur_city.config(text="Kitchener, CA")
     if flag_display_normal:
         display_cur_temp.config(fg=FG_COLOR_NORMAL)
         display_cur_cond.config(fg=FG_COLOR_NORMAL)
+        display_cur_city.config(fg=FG_COLOR_NORMAL)
         display_cur_temp.config(text="%s %s" % (str_temp, parms.TEMP_SUFFIX))
     else:
         display_cur_temp.config(fg=FG_COLOR_ABNORMAL)
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
+        display_cur_city.config(fg=FG_COLOR_ABNORMAL)
         display_cur_temp.config(text="%s" % (str_temp))
-    display_cur_cond.config(text="%s" % str_condition)
+        display_cur_cond.config(text="%s" % str_condition)
     if parms.FLAG_TRACING:
         parms.logger.debug("display_main_procedure going back to sleep")
     tk_root.after(parms.SLEEP_TIME_MSEC, display_main_procedure)
@@ -369,6 +372,10 @@ display_cur_temp.pack()
 display_cur_cond = Label(tk_root, font=(FONT_NAME, 15, FONT_STYLE), \
                          fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_cur_cond.pack()
+
+display_cur_city = Label(tk_root, font=(FONT_NAME, 15, FONT_STYLE), \
+                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
+display_cur_city.pack()
 
 display_spacer2 = Label(tk_root, font=(FONT_NAME, SPACER_SIZE, FONT_STYLE), \
                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
