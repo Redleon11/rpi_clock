@@ -28,7 +28,7 @@ URL_MIDDLE_2 = "&units="
 # Video display parameters
 WINDOW_SIZE_ROOT = "320x200"
 WINDOW_SIZE_POPUP = "320x200"
-FONT_NAME = "Commodore-64-v6.3"
+FONT_NAME = "Commodore-64"
 FONT_SIZE = 20
 FONT_POPUP_SIZE = 24
 FONT_STYLE = "normal"
