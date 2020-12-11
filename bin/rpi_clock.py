@@ -310,6 +310,7 @@ def get_display_data():
                            str_date, str_time, str_temp, str_condition)
     temp=round(str_temp)
     str_temp=temp
+    str_condition=str_condition+", "+ str_temp
     # Return strings for Tk display
     return(str_date, str_time, str_temp, str_condition)
 
@@ -328,13 +329,13 @@ def display_main_procedure():
     display_time.config(text=str_time)
     display_cur_city.config(text="Kitchener, CA")
     if flag_display_normal:
-        display_cur_temp.config(fg=FG_COLOR_NORMAL)
+        
         display_cur_cond.config(fg=FG_COLOR_NORMAL)
         display_cur_city.config(fg=FG_COLOR_NORMAL)
         display_cur_temp.config(text="%s %s" % (str_temp, parms.TEMP_SUFFIX))
         display_cur_cond.config(text="%s" % str_condition)
     else:
-        display_cur_temp.config(fg=FG_COLOR_ABNORMAL)
+        
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
         display_cur_city.config(fg=FG_COLOR_ABNORMAL)
         display_cur_temp.config(text="%s" % (str_temp))
@@ -372,14 +373,14 @@ display_date = Label(tk_root, font=(FONT_NAME, 30, FONT_STYLE), \
                      fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_date.pack()
 
-display_cur_cond = Label(tk_root, font=(FONT_NAME, 25, FONT_STYLE), \
-                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
-display_cur_cond.pack()
-
 display_spacer_cond = Label(tk_root, font=(FONT_NAME, 50, FONT_STYLE), \
                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_spacer_cond.pack()
 display_spacer_cond.config(text=" ")
+
+display_cur_cond = Label(tk_root, font=(FONT_NAME, 25, FONT_STYLE), \
+                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
+display_cur_cond.pack()
 
 display_cur_city = Label(tk_root, font=(FONT_NAME, 25, FONT_STYLE), \
                          fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
@@ -390,9 +391,7 @@ display_spacer2 = Label(tk_root, font=(FONT_NAME, 40, FONT_STYLE), \
 display_spacer2.pack()
 display_spacer2.config(text=" ")
 
-display_cur_temp = Label(tk_root, font=(FONT_NAME, 25, FONT_STYLE), \
-                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
-display_cur_temp.pack()
+
 
 
 # ----------------------------------------------------------
