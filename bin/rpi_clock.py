@@ -332,6 +332,7 @@ def display_main_procedure():
         display_cur_cond.config(fg=FG_COLOR_NORMAL)
         display_cur_city.config(fg=FG_COLOR_NORMAL)
         display_cur_temp.config(text="%s %s" % (str_temp, parms.TEMP_SUFFIX))
+        display_cur_cond.config(text="%s" % str_condition)
     else:
         display_cur_temp.config(fg=FG_COLOR_ABNORMAL)
         display_cur_cond.config(fg=FG_COLOR_ABNORMAL)
