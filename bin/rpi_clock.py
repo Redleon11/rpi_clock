@@ -373,7 +373,7 @@ display_date = Label(tk_root, font=(FONT_NAME, 30, FONT_STYLE), \
                      fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_date.pack()
 
-display_spacer_cond = Label(tk_root, font=(FONT_NAME, 50, FONT_STYLE), \
+display_spacer_cond = Label(tk_root, font=(FONT_NAME, 75, FONT_STYLE), \
                         fg=FG_COLOR_NORMAL, bg=BG_COLOR_ROOT)
 display_spacer_cond.pack()
 display_spacer_cond.config(text=" ")
