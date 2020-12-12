@@ -361,7 +361,7 @@ display_spacer1.config(text=" ")
 
 
 display_time = Label(tk_root, font=(FONT_NAME, 75, FONT_STYLE), \
-                     fg="green", bg=BG_COLOR_ROOT)
+                     fg="lightgreen", bg=BG_COLOR_ROOT)
 display_time.pack()
 
 display_spacer_mid = Label(tk_root, font=(FONT_NAME, 25, FONT_STYLE), \
